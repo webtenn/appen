@@ -1,0 +1,425 @@
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+  outline: 0.125rem solid #4d65ff;
+  outline-offset: 0.125rem;
+}
+
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+
+/* Prevent all click and hover interaction with an element */
+.pointer-events-off {
+	pointer-events: none;
+}
+
+/* Enables all click and hover interaction with an element */
+.pointer-events-on {
+  pointer-events: auto;
+}
+
+/* Create a class of .div-square which maintains a 1:1 dimension of a div */
+.div-square::after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  .hide, .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+    .hide-mobile-landscape {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+ 
+.margin-0 {
+  margin: 0rem !important;
+}
+  
+.padding-0 {
+  padding: 0rem !important;
+}
+
+.spacing-clean {
+  padding: 0rem !important;
+  margin: 0rem !important;
+}
+
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+  
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+  
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+  
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+  
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+/* Apply "..." at 100% width */
+.truncate-width { 
+  width: 100%; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+/* Removes native scrollbar */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; 
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* custom css */
+
+.not-active {
+	pointer-events: none;
+  cursor: default;
+}
+
+/* Navbar */
+
+@media only screen and (min-width: 992px) {
+	.dd_menu-data-list, .dd_menu-res-list {
+    min-width: 30rem !important;
+  	max-width: 63rem;
+  	bottom: auto;
+  	left: 0;
+  	right: 0;
+  	margin: 0 auto;
+	}
+  .dd_menu-data-list, .dd_menu-apps-list, .dd_menu-res-list  {
+    background: radial-gradient(ellipse 80% 200% at 50% 50%, rgba(51,61,89,0.75), #08090d);
+  } 
+}
+
+.dd_link .dd_link-icon, .dd_link .dd_link-text .text-size-small {
+  color: #b0b7c9;
+  transition: color .125s cubic-bezier(.455, .03, .515, .955);
+  transition-behavior: normal;
+  transition-duration: 0.125s;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-delay: 0s;
+  transition-property: color;
+}
+
+.dd_link:hover .dd_link-icon, .dd_link:hover .dd_link-text .text-size-small { color: #fff; }
+
+/* Button Gradients */
+
+.btn-link {
+  background: linear-gradient(224deg, #FFECDF -13.6%, #0B77D5 26.79%, #F44741 107.05%);
+}
+
+.btn {
+	background: linear-gradient(44deg, #08090D 32.08%, #0B77D5 83.07%, #FFECDF 106.3%);
+}
+
+.btn.btn-secondary { background: none #08090D;}
+
+.is-grad {
+	color: #fff;
+  border: 1px solid transparent;
+  background:
+  linear-gradient(44deg, #08090D 32.08%, #0B77D5 83.07%, #FFECDF 106.3%) padding-box,
+  linear-gradient(224deg, #FFECDF -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+}
+
+.is-grad--open {
+  color: #fff;
+  border: 1px solid transparent;
+  background:
+  linear-gradient(#08090D, #08090D) padding-box,
+  linear-gradient(224deg, #FFECDF -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+}
+
+/* Gradient Text */
+
+.text-gradient-light {
+	padding-bottom: 0.5rem;
+  background: -webkit-linear-gradient(-45deg, var(--accent-two) 10%, var(--accent-one) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent-one {
+	padding-bottom: 0.5rem;
+  background: -webkit-linear-gradient(0deg, var(--accent-one) 10%, var(--shade--vermilion-300) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent-two {
+	padding-bottom: 0.5rem;
+  background: -webkit-linear-gradient(0deg, var(--accent-two) 10%, var(--shade--french-blue-100) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-clear {
+	padding-bottom: 0.5rem;
+  background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255) 30%, rgba(255, 255, 255, 0.50));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Borders */
+
+.grad-border-bl {
+  border: 1px solid transparent;
+  background:
+  linear-gradient(#08090D, #08090D) padding-box,
+  linear-gradient(45deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+}
+  
+.grad-border-tl {
+  border: 1px solid transparent;
+  background:
+  linear-gradient(#08090D, #08090D) padding-box,
+  linear-gradient(135deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+}
+
+.grad-border-tr {
+  border: 1px solid transparent;
+  background:
+  linear-gradient(#08090D, #08090D) padding-box,
+  linear-gradient(225deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+}
+  
+.grad-border-br {
+  border: 1px solid transparent;
+  background:
+  linear-gradient(#08090D, #08090D) padding-box,
+  linear-gradient(315deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+}
+  
+.card-hover-grad {
+  border: 2px solid #3f4659;
+  background:
+  linear-gradient(#08090D, #08090D) padding-box,
+  linear-gradient(225deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+  
+.card-hover-grad:hover {
+  border: 2px solid transparent;
+}
+
+/* Link Styling */
+
+p a,
+.text-rich-text a,
+ul.link-list a {
+  color: #fff;
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+  text-decoration-color: #40a4f0;
+  text-decoration-line: underline;
+  text-underline-offset: .25em;
+}
+
+p a:hover,
+p a:focus,
+.text-rich-text a:hover,
+.text-rich-text a:focus,
+ul.link-list a:hover,
+ul.link-list a:focus {
+  color: #82c2f7;
+}
+
+a.appen-footer_link,
+a.appen-footer_legal-link {
+	text-decoration-color: transparent;
+	-webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover.appen-footer_link,
+a:focus.appen-footer_link,
+a:hover.appen-footer_legal-link,
+a:focus.appen-footer_legal-link {
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+	text-decoration-color: #40a4f0;
+  text-decoration-line: underline;
+	text-underline-offset: .25em;
+}
+
+a.appen-footer_social-link {
+	color: #fff;
+	-webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+a:hover.appen-footer_social-link,
+a:focus.appen-footer_social-link {
+	color: #40a4f0;
+}
+
+/* Hero */
+
+.hero-grad-red {
+	background-image: radial-gradient(50% 70% at 50% 0%, rgba(244, 71, 65, 0.3) 0%, transparent 100%);
+}
+
+.hero-grad-blue {
+  background-image: radial-gradient(50% 70% at 50% 0%, rgba(11, 119, 213, 0.3) 0%, transparent 100%);
+}
+
+/* Wide Cards */
+
+.card-wide_item:first-of-type,
+.list-content_item:first-of-type { border-top: none; }
+
+/* Modals */
+
+.modal_leaders-content {
+  position: relative;
+	border: 1px solid transparent;
+  background-color: #08090d;
+  background:
+  radial-gradient(ellipse 80% 200% at 50% 50%, rgba(51,61,89,1), #08090d) padding-box,
+  linear-gradient(135deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;
+  max-height: calc(100vh - 5rem);
+	overflow-y: auto;
+}
+
+/* Swiper */
+
+.swiper-button-disabled,
+.swiper-button-disabled {
+  color: #3f4659;
+  border-color: #3f4659;
+}
