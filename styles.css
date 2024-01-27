@@ -388,7 +388,122 @@ a:focus.appen-footer_social-link {
 	color: #40a4f0;
 }
 
-/* Hero */
+/* Main Hero */
+
+.appen-hero {  
+  position: relative;    
+  padding-block: 4rem;
+  isolation: isolate;
+  background-color: #08090d;
+  --wrapper-padding-inline: 5%;
+  --wrapper-max-width: 80rem;
+  --section-padding-block: 1rem;
+}
+
+.appen-hero img {
+  width: 100%;
+  height: auto;
+}
+
+.mesh-one {
+  background-color: hsla(228,23%,4%,1);
+  background-image:
+    radial-gradient(220% 100% at 100% -10%, hsla(1,89%,61%,0.75) 0px, transparent 50%),
+    radial-gradient(180% 90% at 0% 110%, hsla(206,89%,44%,0.75) 0px, transparent 50%);
+  background-repeat: no-repeat;  
+}
+
+.mesh-two {
+  background-color: hsla(228,23%,4%,1);
+  background-image:
+    radial-gradient(105% 150% at 50% -36%, hsla(1,89%,61%,0.9) 0px, transparent 50%),
+    radial-gradient(105% 150% at 50% 136%, hsla(206,89%,44%,0.9) 0px, transparent 50%);
+  background-repeat: no-repeat;  
+}
+
+.mesh-three {
+  background-color: hsla(228,23%,4%,1);
+  background-image:
+    radial-gradient(110% 180% at 50% -16%, hsla(1,89%,61%,0.65) 0px, transparent 50%);
+  background-repeat: no-repeat;  
+}
+
+.mesh-four {
+  background-color: hsla(228,23%,4%,1);
+  background-image:
+    radial-gradient(110% 180% at 50% -16%, hsla(206,89%,44%,0.65) 0px, transparent 50%);
+  background-repeat: no-repeat;  
+}
+
+.appen-hero .appen-hero_content {
+  padding-block: var(--section-padding-block);
+  padding-inline: var(--wrapper-padding-inline);
+}
+
+.appen-hero .image-edge,
+.appen-hero .image-contain {
+  padding-block: var(--section-padding-block);
+  padding-inline: var(--wrapper-padding-inline);
+}
+
+.appen-hero .image-bleed {
+  padding-block: var(--section-padding-block);
+  padding-left: 5%;
+}
+
+.appen-hero {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 62rem) { 
+  .appen-hero {
+    display: grid;
+    grid-template-columns:
+      minmax(var(--wrapper-padding-inline), 1fr)
+      minmax(0, calc(var(--wrapper-max-width) / 2))
+      minmax(0, calc(var(--wrapper-max-width) / 2))
+      minmax(var(--wrapper-padding-inline), 1fr);
+    position: relative;
+    padding-block: 8rem;
+  }
+  .appen-hero .appen-hero_content {
+    display: grid;       
+    grid-column: 2 / 3;
+    align-content: center;
+    justify-items: start;
+    padding-block: 0;
+    padding-inline: 0;
+    padding-right: 4rem;
+  } 
+  .appen-hero .image-edge { 
+    display: grid;
+    grid-column: 3 / -1;
+    align-content: center;
+    justify-items: start;   
+    padding-block: 0;
+    padding-inline: 0;
+    padding-right: 4rem;
+  } 
+  .appen-hero .image-bleed { 
+    display: grid;
+    grid-column: 3 / -1;
+    align-content: center;
+    justify-items: start;   
+    padding-block: 0;
+    padding-inline: 0;
+  }  
+  .appen-hero .image-contain { 
+    display: grid;
+    grid-column: 3 / -2;
+    align-content: center;
+    justify-items: start;   
+    padding-block: 0;
+    padding-inline: 0;
+  } 
+}
+
+/* Simple Hero Backgrounds */
 
 .hero-grad-red {
 	background-image: radial-gradient(50% 70% at 50% 0%, rgba(244, 71, 65, 0.3) 0%, transparent 100%);
