@@ -348,6 +348,9 @@ ul.link-list a {
   text-decoration-color: #40a4f0;
   text-decoration-line: underline;
   text-underline-offset: .25em;
+  text-decoration-color: transparent;
+	-webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 p a:hover,
@@ -537,17 +540,4 @@ a:focus.appen-footer_social-link {
 .swiper-button-disabled {
   color: #3f4659;
   border-color: #3f4659;
-}
-
-/* Icons */ 
-.ico-test { 
-	background: var(--shade--charcoal-500);
-  -webkit-mask-image: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/656a605609413dfd3feb9dbc_icon.svg);
-  mask-image: url(https://uploads-ssl.webflow.com/656a605609413dfd3feb9d34/656a605609413dfd3feb9dbc_icon.svg); 
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  -webkit-mask-position: center;
-          mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;     
 }
