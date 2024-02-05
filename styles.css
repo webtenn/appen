@@ -221,7 +221,10 @@ a,
 	}
   .dd_menu-data-list, .dd_menu-apps-list, .dd_menu-res-list  {
     background: radial-gradient(ellipse 80% 200% at 50% 50%, rgba(51,61,89,0.75), #08090d);
-  } 
+  }
+  .dd_menu-locale-list  {
+    background: radial-gradient(ellipse 100% 200% at 50% 50%, rgba(51,61,89,0.65), #08090d);
+  }
 }
 
 .dd_link .dd_link-icon, .dd_link .dd_link-text .text-size-small {
@@ -270,6 +273,7 @@ a,
 	padding-bottom: 0.5rem;
   background: -webkit-linear-gradient(-45deg, var(--accent-two) 10%, var(--accent-one) 90%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -277,6 +281,7 @@ a,
 	padding-bottom: 0.5rem;
   background: -webkit-linear-gradient(0deg, var(--accent-one) 10%, var(--shade--vermilion-300) 90%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -284,6 +289,7 @@ a,
 	padding-bottom: 0.5rem;
   background: -webkit-linear-gradient(0deg, var(--accent-two) 10%, var(--shade--french-blue-100) 80%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -291,6 +297,7 @@ a,
 	padding-bottom: 0.5rem;
   background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255) 30%, rgba(255, 255, 255, 0.50));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
