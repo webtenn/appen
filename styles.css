@@ -369,7 +369,8 @@ ul.link-list a:focus {
 }
 
 a.appen-footer_link,
-a.appen-footer_legal-link {
+a.appen-footer_legal-link,
+a.date-filter-link {
 	text-decoration-color: transparent;
 	-webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -378,7 +379,9 @@ a.appen-footer_legal-link {
 a:hover.appen-footer_link,
 a:focus.appen-footer_link,
 a:hover.appen-footer_legal-link,
-a:focus.appen-footer_legal-link {
+a:focus.appen-footer_legal-link,
+a:hover.date-filter-link,
+a:focus.date-filter-link {
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
 	text-decoration-color: #40a4f0;
