@@ -404,13 +404,19 @@ a:focus.appen-footer_social-link {
 
 .appen-hero {  
   position: relative;    
-  padding-block: 4rem;
+  padding-block: 2rem;
   isolation: isolate;
   background-color: #08090d;
   --wrapper-padding-inline: 5%;
   --wrapper-max-width: 80rem;
   --section-padding-block: 1rem;
 }
+
+.appen-hero.pb-none { padding-block: 0; }
+.appen-hero.pb-small { padding-block: 1rem; }
+.appen-hero.pb-medium { padding-block: 2rem; }
+.appen-hero.pb-large { padding-block: 3rem; }
+.appen-hero.pb-xlarge { padding-block: 4rem; }
 
 .appen-hero img {
   width: 100%;
@@ -447,6 +453,16 @@ a:focus.appen-footer_social-link {
   background-repeat: no-repeat;  
 }
 
+.mesh-five {
+  background-color: hsla(228,23%,4%,1);
+  background-image: 
+    radial-gradient(circle at 95% 100%, rgba(23, 137, 224, .3), transparent 30%), 
+    radial-gradient(circle at 100%, rgba(244, 71, 65, .36), transparent 30%),    
+    radial-gradient(circle at 0%, rgba(23, 137, 224, .36), transparent 30%),
+    radial-gradient(circle at 5% 100%, rgba(244, 71, 65, .3), transparent 30%);
+  background-repeat: no-repeat;
+}
+
 .appen-hero .appen-hero_content {
   padding-block: var(--section-padding-block);
   padding-inline: var(--wrapper-padding-inline);
@@ -479,6 +495,12 @@ a:focus.appen-footer_social-link {
     position: relative;
     padding-block: 8rem;
   }
+
+  .appen-hero.pb-small { padding-block: 3rem; }
+  .appen-hero.pb-medium { padding-block: 5rem; }
+  .appen-hero.pb-large { padding-block: 7rem; }
+  .appen-hero.pb-xlarge { padding-block: 9rem; }  
+
   .appen-hero .appen-hero_content {
     display: grid;       
     grid-column: 2 / 3;
@@ -487,7 +509,8 @@ a:focus.appen-footer_social-link {
     padding-block: 0;
     padding-inline: 0;
     padding-right: 4rem;
-  } 
+  }
+
   .appen-hero .image-edge { 
     display: grid;
     grid-column: 3 / -1;
@@ -497,6 +520,7 @@ a:focus.appen-footer_social-link {
     padding-inline: 0;
     padding-right: 4rem;
   } 
+
   .appen-hero .image-bleed { 
     display: grid;
     grid-column: 3 / -1;
@@ -505,6 +529,7 @@ a:focus.appen-footer_social-link {
     padding-block: 0;
     padding-inline: 0;
   }  
+  
   .appen-hero .image-contain { 
     display: grid;
     grid-column: 3 / -2;
