@@ -208,6 +208,31 @@ a,
   cursor: default;
 }
 
+/* Text trucation + ellipsis */
+[aai-truncate] {
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+  
+[aai-truncate="2"] {
+  -webkit-line-clamp: 2;
+}
+  
+[aai-truncate="3"] {
+  -webkit-line-clamp: 3;
+}
+  
+[aai-truncate="4"] {
+  -webkit-line-clamp: 4;
+}
+  
+[aai-truncate="5"] {
+  -webkit-line-clamp: 5;
+}
+
 /* Navbar */
 
 @media only screen and (min-width: 992px) {
@@ -248,29 +273,29 @@ a,
 /* Button Gradients */
 
 .btn-link {
-  background: linear-gradient(224deg, #FFECDF -13.6%, #0B77D5 26.79%, #F44741 107.05%);
+  background: linear-gradient(224deg, var(--button-gradient--bg-color-highlight) -13.6%, var(--button-gradient--border-primary) 26.79%, var(--button-gradient--border-secondary) 107.05%);
 }
 
 .btn {
-	background: linear-gradient(44deg, #08090D 32.08%, #0B77D5 83.07%, #FFECDF 106.3%);
+	background: linear-gradient(44deg, var(--black) 32.08%, var(--button-gradient--border-primary) 83.07%, var(--button-gradient--bg-color-highlight) 106.3%);
 }
 
-.btn.btn-secondary { background: none #08090D;}
+.btn.btn-secondary { background: none var(--black);}
 
 .is-grad {
 	color: #fff;
   border: 1px solid transparent;
   background:
-  linear-gradient(44deg, #08090D 32.08%, #0B77D5 83.07%, #FFECDF 106.3%) padding-box,
-  linear-gradient(224deg, #FFECDF -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+  linear-gradient(44deg, var(--black) 32.08%, var(--button-gradient--bg-color-primary) 83.07%, var(--button-gradient--bg-color-highlight) 106.3%) padding-box,
+  linear-gradient(224deg, var(--button-gradient--border-highlight) -13.6%, var(--button-gradient--border-primary) 26.79%, var(--button-gradient--border-secondary) 107.05%) border-box;      
 }
 
 .is-grad--open {
   color: #fff;
   border: 1px solid transparent;
   background:
-  linear-gradient(#08090D, #08090D) padding-box,
-  linear-gradient(224deg, #FFECDF -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+  linear-gradient(var(--black), var(--black)) padding-box,
+  linear-gradient(224deg, var(--button-gradient--border-highlight) -13.6%, var(--button-gradient--border-primary) 26.79%, var(--button-gradient--border-secondary) 107.05%) border-box;      
 }
 
 /* Gradient Text */
@@ -307,41 +332,69 @@ a,
   -webkit-text-fill-color: transparent;
 }
 
+.text-gradient-primary {
+  background: -webkit-linear-gradient(0deg, var(--text-gradient--primary-start) 10%, var(--text-gradient--primary-end) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-secondary {
+  background: -webkit-linear-gradient(0deg, var(--text-gradient--secondary-start) 10%, var(--text-gradient--secondary-end) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: -webkit-linear-gradient(0deg, var(--text-gradient--accent-start) -30%, var(--text-gradient--accent-end) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blend {
+  background: -webkit-linear-gradient(-45deg, var(--text-gradient--blend-start) 10%, var(--text-gradient--blend-end) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Gradient Borders */
 
 .grad-border-bl {
   border: 1px solid transparent;
   background:
-  linear-gradient(#08090D, #08090D) padding-box,
-  linear-gradient(45deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+  linear-gradient(var(--black), var(--black)) padding-box,
+  linear-gradient(45deg, var(--black) -13.6%, var(--border-gradient--bg-color-mid) 26.79%, var(--border-gradient--bg-color-start) 107.05%) border-box;      
 }
   
 .grad-border-tl {
   border: 1px solid transparent;
   background:
-  linear-gradient(#08090D, #08090D) padding-box,
-  linear-gradient(135deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+  linear-gradient(var(--black), var(--black)) padding-box,
+  linear-gradient(135deg, var(--black) -13.6%, var(--border-gradient--bg-color-mid) 26.79%, var(--border-gradient--bg-color-start) 107.05%) border-box;      
 }
 
 .grad-border-tr {
   border: 1px solid transparent;
   background:
-  linear-gradient(#08090D, #08090D) padding-box,
-  linear-gradient(225deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+  linear-gradient(var(--black), var(--black)) padding-box,
+  linear-gradient(225deg, var(--black) -13.6%, var(--border-gradient--bg-color-mid) 26.79%, var(--border-gradient--bg-color-start) 107.05%) border-box;      
 }
   
 .grad-border-br {
   border: 1px solid transparent;
   background:
-  linear-gradient(#08090D, #08090D) padding-box,
-  linear-gradient(315deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;      
+  linear-gradient(var(--black), var(--black)) padding-box,
+  linear-gradient(315deg, var(--black) -13.6%, var(--border-gradient--bg-color-mid) 26.79%, var(--border-gradient--bg-color-start) 107.05%) border-box;      
 }
   
 .card-hover-grad {
-  border: 2px solid #3f4659;
+  border: 2px solid var(--border-color--border-accent);
   background:
-  linear-gradient(#08090D, #08090D) padding-box,
-  linear-gradient(225deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;
+  linear-gradient(var(--black), var(--black)) padding-box,
+  linear-gradient(225deg, var(--black) -13.6%, var(--border-gradient--bg-color-mid) 26.79%, var(--border-gradient--bg-color-start) 107.05%) border-box;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -358,7 +411,7 @@ ul.link-list a {
   color: #fff;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-  text-decoration-color: #40a4f0;
+  text-decoration-color: var(--link-color--link-primary-hover);
   text-decoration-line: underline;
   text-underline-offset: .25em;
   -webkit-transition: all 0.3s ease-in-out;
@@ -371,7 +424,7 @@ p a:focus,
 .text-rich-text a:focus,
 ul.link-list a:hover,
 ul.link-list a:focus {
-  color: #82c2f7;
+  color: var(--link-color--link-primary);
 }
 
 a.appen-footer_link,
@@ -390,7 +443,7 @@ a:hover.date-filter-link,
 a:focus.date-filter-link {
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-	text-decoration-color: #40a4f0;
+	text-decoration-color: var(--link-color--link-primary-hover);
   text-decoration-line: underline;
 	text-underline-offset: .25em;
 }
@@ -403,7 +456,7 @@ a.appen-footer_social-link {
 
 a:hover.appen-footer_social-link,
 a:focus.appen-footer_social-link {
-	color: #40a4f0;
+	color: var(--link-color--link-primary-hover);
 }
 
 /* Main Hero */
@@ -462,10 +515,10 @@ a:focus.appen-footer_social-link {
 .mesh-five {
   background-color: hsla(228,23%,4%,1);
   background-image: 
-    radial-gradient(circle at 95% 100%, rgba(23, 137, 224, .3), transparent 30%), 
-    radial-gradient(circle at 100%, rgba(244, 71, 65, .36), transparent 30%),    
-    radial-gradient(circle at 0%, rgba(23, 137, 224, .36), transparent 30%),
-    radial-gradient(circle at 5% 100%, rgba(244, 71, 65, .3), transparent 30%);
+    radial-gradient(circle at 85% 100%, rgba(34,71, 218, .34), transparent 55%), 
+    radial-gradient(circle at 100% -15%, rgba(87, 216, 115, .6), transparent 45%),    
+    radial-gradient(circle at 0% 40%, rgba(34,71, 218, .34), transparent 55%),
+    radial-gradient(circle at 14% 130%, rgba(87, 216, 115, .75), transparent 45%);
   background-repeat: no-repeat;
 }
 
@@ -570,10 +623,10 @@ a:focus.appen-footer_social-link {
 .modal_leaders-content {
   position: relative;
 	border: 1px solid transparent;
-  background-color: #08090d;
+  background-color: var(--black);
   background:
-  radial-gradient(ellipse 80% 200% at 50% 50%, rgba(51,61,89,1), #08090d) padding-box,
-  linear-gradient(135deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;
+  radial-gradient(ellipse 80% 200% at 50% 50%, rgba(51,61,89,1), var(--black)) padding-box,
+  linear-gradient(135deg, var(--border-gradient--bg-color-end) -13.6%, var(--border-gradient--bg-color-mid) 26.79%, var(--border-gradient--bg-color-start) 107.05%) border-box;
   max-height: calc(100vh - 5rem);
 	overflow-y: auto;
 }
@@ -589,7 +642,7 @@ a:focus.appen-footer_social-link {
 /* Form Modal */
 
 .form-modal_content-wrapper {
-	background: #08090d;
+	background: var(--black);
 	border: none;
 }
 
@@ -598,10 +651,10 @@ a:focus.appen-footer_social-link {
     position: relative;
     border: 1px solid transparent;
     border-radius: 1.5rem;
-    background: #08090d;
+    background: var(--black);
     background:
-    radial-gradient(ellipse 80% 200% at 50% 50%, #08090d, #08090d) padding-box,
-    linear-gradient(135deg, #08090D -13.6%, #0B77D5 26.79%, #F44741 107.05%) border-box;
+    radial-gradient(ellipse 80% 200% at 50% 50%, var(--black), var(--black)) padding-box,
+    linear-gradient(135deg, var(--border-gradient--bg-color-end) -13.6%, var(--border-gradient--bg-color-mid) 26.79%, var(--border-gradient--bg-color-start) 107.05%) border-box;
   }
 }
 
@@ -725,8 +778,8 @@ a:focus.appen-footer_social-link {
   font-weight: 500;
   padding: 0.75rem 1.5rem;
 	margin: 1em auto !important;
-  border: 1px solid #f44741;
-	background: #f44741;
+  border: 1px solid var(--button--btn-accent);
+	background: var(--button--btn-accent);
   box-shadow: none;
 	border-radius: 50rem;
   -webkit-transition: background 0.3s ease;
@@ -734,5 +787,5 @@ a:focus.appen-footer_social-link {
 }
 
 #mktoForm_2723 > div.mktoButtonRow > span.mktoButtonWrap > button:hover {
-	background: #e12721;
+	background: var(--button--btn-accent-hover);
 }
