@@ -352,6 +352,7 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  max-width: max-content;
 }
 
 .text-gradient-primary {
@@ -359,6 +360,7 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  max-width: max-content;
 }
 
 .text-gradient-secondary {
@@ -366,6 +368,7 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  max-width: max-content;
 }
 
 .text-gradient-accent {
@@ -373,6 +376,7 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  max-width: max-content;
 }
 
 .text-gradient-blend {
@@ -380,6 +384,7 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  max-width: max-content;
 }
 
 /* Gradient Borders */
@@ -433,7 +438,7 @@ ul.link-list a {
   color: #fff;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-  text-decoration-color: var(--link-color--link-secondary);
+  text-decoration-color: var(--link-color--link-primary);
   text-decoration-line: underline;
   text-underline-offset: .25em;
   -webkit-transition: all 0.3s ease-in-out;
@@ -446,7 +451,7 @@ p a:focus,
 .text-rich-text a:focus,
 ul.link-list a:hover,
 ul.link-list a:focus {
-  color: var(--link-color--link-secondary);
+  color: var(--link-color--link-primary);
 }
 
 a.appen-footer_link,
@@ -465,7 +470,7 @@ a:hover.date-filter-link,
 a:focus.date-filter-link {
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-	text-decoration-color: var(--link-color--link-secondary);
+	text-decoration-color: var(--link-color--link-primary);
   text-decoration-line: underline;
 	text-underline-offset: .25em;
 }
@@ -478,7 +483,7 @@ a.appen-footer_social-link {
 
 a:hover.appen-footer_social-link,
 a:focus.appen-footer_social-link {
-	color: var(--link-color--link-secondary);
+	color: var(--link-color--link-primary);
 }
 
 /* Main Hero */
@@ -632,7 +637,14 @@ a:focus.appen-footer_social-link {
 }
 
 .hero-grad-blue {
-  background-image: radial-gradient(50% 70% at 50% 0%, rgba(11, 119, 213, 0.3) 0%, transparent 100%);
+  background-image: radial-gradient(50% 70% at 50% 0%, rgba(34, 71, 218, 0.3) 0%, transparent 100%);
+}
+
+.hero-grad-blend {
+  background-image:
+  	radial-gradient(60% 70% at 40% 0%, rgba(34, 71, 218, 0.36) 0%, transparent 100%),
+  	radial-gradient(60% 70% at 60% 0%, rgba(87, 216, 115, 0.36) 0%, transparent 100%),
+    radial-gradient(40% 50% at 50% -18%, rgba(124, 208, 255, 0.24) 0%, transparent 100%);
 }
 
 /* Wide Cards */
