@@ -284,6 +284,8 @@ a,
 
 .dd_link:hover .dd_link-icon .ico { background-color: var(--text-color--text-primary-nav); }
 
+.dd-item_article .text-size-small { color: var(--text-color--text-secondary-nav);}
+
 /* Background Gradients */
 
 .marquee_reveal {
@@ -431,7 +433,7 @@ ul.link-list a {
   color: #fff;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-  text-decoration-color: var(--link-color--link-primary-hover);
+  text-decoration-color: var(--link-color--link-secondary);
   text-decoration-line: underline;
   text-underline-offset: .25em;
   -webkit-transition: all 0.3s ease-in-out;
@@ -444,7 +446,7 @@ p a:focus,
 .text-rich-text a:focus,
 ul.link-list a:hover,
 ul.link-list a:focus {
-  color: var(--link-color--link-primary);
+  color: var(--link-color--link-secondary);
 }
 
 a.appen-footer_link,
@@ -463,7 +465,7 @@ a:hover.date-filter-link,
 a:focus.date-filter-link {
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
-	text-decoration-color: var(--link-color--link-primary-hover);
+	text-decoration-color: var(--link-color--link-secondary);
   text-decoration-line: underline;
 	text-underline-offset: .25em;
 }
@@ -476,7 +478,7 @@ a.appen-footer_social-link {
 
 a:hover.appen-footer_social-link,
 a:focus.appen-footer_social-link {
-	color: var(--link-color--link-primary-hover);
+	color: var(--link-color--link-secondary);
 }
 
 /* Main Hero */
