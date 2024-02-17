@@ -352,7 +352,6 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  max-width: max-content;
 }
 
 .text-gradient-primary {
@@ -360,7 +359,6 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  max-width: max-content;
 }
 
 .text-gradient-secondary {
@@ -368,7 +366,6 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  max-width: max-content;
 }
 
 .text-gradient-accent {
@@ -376,7 +373,6 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  max-width: max-content;
 }
 
 .text-gradient-blend {
@@ -384,7 +380,6 @@ a,
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  max-width: max-content;
 }
 
 /* Gradient Borders */
