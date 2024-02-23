@@ -355,21 +355,21 @@ a,
 }
 
 .text-gradient-primary {
-  background: -webkit-linear-gradient(0deg, var(--text-gradient--primary-start) 10%, var(--text-gradient--primary-end) 80%);
+  background: -webkit-linear-gradient(-45deg, var(--text-gradient--primary-start) 10%, var(--text-gradient--primary-end) 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-secondary {
-  background: -webkit-linear-gradient(0deg, var(--text-gradient--secondary-start) 10%, var(--text-gradient--secondary-end) 80%);
+  background: -webkit-linear-gradient(-45deg, var(--text-gradient--secondary-start) 10%, var(--text-gradient--secondary-end) 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-accent {
-  background: -webkit-linear-gradient(0deg, var(--text-gradient--accent-start) -30%, var(--text-gradient--accent-end) 80%);
+  background: -webkit-linear-gradient(-45deg, var(--text-gradient--accent-start) -30%, var(--text-gradient--accent-end) 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -381,6 +381,10 @@ a,
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.fit-grad { width: fit-content; }
+
+.fit-grad-c { width: fit-content; margin: 0 auto; }
 
 /* Gradient Borders */
 
@@ -537,10 +541,35 @@ a:focus.appen-footer_social-link {
 .mesh-five {
   background-color: hsla(228,23%,4%,1);
   background-image: 
-    radial-gradient(circle at 85% 100%, rgba(34,71, 218, .34), transparent 55%), 
-    radial-gradient(circle at 100% -15%, rgba(87, 216, 115, .6), transparent 45%),    
-    radial-gradient(circle at 0% 40%, rgba(34,71, 218, .34), transparent 55%),
-    radial-gradient(circle at 14% 130%, rgba(87, 216, 115, .75), transparent 45%);
+    radial-gradient(circle at 85% 60%, rgba(34,71, 218, .4), transparent 55%), 
+    radial-gradient(circle at 100% 30%, rgba(87, 216, 115, .55), transparent 45%),    
+    radial-gradient(circle at 0% 40%, rgba(34,71, 218, .4), transparent 55%),
+    radial-gradient(circle at 6% 120%, rgba(87, 216, 115, .55), transparent 50%);
+  background-repeat: no-repeat;
+}
+
+.mesh-six:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;  
+  background-image: 
+    radial-gradient(circle at 85% 60%, rgba(34,71, 218, .55), transparent 55%), 
+    radial-gradient(circle at 100% 30%, rgba(87, 216, 115, .6), transparent 45%),    
+    radial-gradient(circle at 0% 40%, rgba(34,71, 218, .55), transparent 55%),
+    radial-gradient(circle at 6% 120%, rgba(87, 216, 115, 1), transparent 50%);
+  background-repeat: no-repeat;
+  -webkit-mask: linear-gradient(0deg, transparent 40%, white 90%);
+  mask: linear-gradient(0deg, transparent 40%, white 90%);
+}
+
+.mesh-seven {
+  background-color: hsla(228,23%,4%,1);
+  background-image:        
+    /* Right Green */
+    radial-gradient(65% 85% at 50% -12%, rgba(87, 216, 115, .36), transparent 70%),
+    /* Right Blue  */
+    radial-gradient(130% 110% at 50% 0%, rgba(34,71, 218, .55), transparent 70%);
   background-repeat: no-repeat;
 }
 
@@ -640,6 +669,33 @@ a:focus.appen-footer_social-link {
   	radial-gradient(60% 70% at 40% 0%, rgba(34, 71, 218, 0.36) 0%, transparent 100%),
   	radial-gradient(60% 70% at 60% 0%, rgba(87, 216, 115, 0.36) 0%, transparent 100%),
     radial-gradient(40% 50% at 50% -18%, rgba(124, 208, 255, 0.24) 0%, transparent 100%);
+}
+
+/* Flex Cards */
+
+.flex-card_component { 
+	--gap: 3rem; 
+	gap: var(--gap); 
+}
+
+@media only screen and (min-width: 992px) {
+	.flex-card_component {
+    --number-of-items: 3;
+    --number-of-gaps: 2;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.flex-card_component {
+    --number-of-items: 2;
+    --number-of-gaps: 1;
+  }
+}
+
+@media (min-width: 768px) {
+.flex-card {
+    width: calc(100% / var(--number-of-items) - (var(--gap) * var(--number-of-gaps) / var(--number-of-items)));
+  }
 }
 
 /* Wide Cards */
